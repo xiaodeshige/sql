@@ -1,0 +1,3 @@
+# Write your MySQL query statement below
+#select Name from Candidate where id = (select Candidateid from Vote group by CandidateId order by count(*) desc limit 1)
+#select  max(name) as Name from Candidate right join Vote on Candidate.id = Vote.CandidateId group by Vote.CandidateId order by count(*) desc limit 1
