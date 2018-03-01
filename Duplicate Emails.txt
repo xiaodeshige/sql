@@ -1,0 +1,9 @@
+# Write your MySQL query statement below
+#select Email from Person group by Email having count(*)>1;
+
+#理解group by和left join
+#如果只出现一次,就不会有mismatch,否则会有mismatch
+#select distinct a.Email from Person a
+#left join (select min(Id), Email from Person group by Email) b
+#on (a.email = b.email) and (a.Id = b.Id)
+#where b.Email is null
